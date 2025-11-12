@@ -51,8 +51,8 @@ const Timer = () => {
     return (
         <div className=''
             style={{
-                background: '#d3d3d3',
-                border: '2px solid #333',
+                background: '#1f1f1fff',
+                border: '2px solid #292929ff',
                 borderRadius: '12px',
                 padding: '14px 16px 16px 16px',
                 width: '290px',height: '180px',
@@ -61,19 +61,19 @@ const Timer = () => {
                 // boxShadow: '2px 2px 8px #ccc'
             }}
         >
-            <h1
-                className='text-center text-black fw-bold'
+            <h2
+                className='text-center'
                 style={{
-                    // color: '#000000ff',
+                    color: 'whitesmoke',
                     textAlign: 'center',
                     fontSize: '2rem',
                     marginBottom: '12px'
                 }}
             >
                 TIMER
-            </h1>
+            </h2>
             <input
-                className='form-control text-end fs-3 fw-bold mb-3'
+                className='form-control text-end fs-3 mb-3'
                 style={{
                     background: '#fff',
                     border: '2px solid #888',
@@ -88,7 +88,6 @@ const Timer = () => {
             />
             <div className='d-flex gap-3 mt-1'>
                 <button
-                    className='fw-bold'
                     style={{
                         background: '#e53935',
                         color: '#fff',
@@ -107,7 +106,6 @@ const Timer = () => {
                     <span style={{fontSize: '1.3em'}}>⭮</span> Reset
                 </button>
                 <button
-                    className='fw-bold'
                     style={{
                         background: isRunning ? '#fbc02d' : '#388e3c',
                         color: '#fff',

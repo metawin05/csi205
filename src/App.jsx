@@ -1,7 +1,7 @@
 import './App.css'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
 import Components from './pages/Components'
 import Home from './pages/Home'
 import Animation from './pages/Animation'
@@ -17,7 +17,6 @@ import Login from './pages/Login'
 function App() {
   const [token, setToken] = useState('')
   const [role, setRole] = useState('')
-
   const [products, setProducts] = useState([])
   const [carts, setCarts] = useState([])
 
@@ -25,11 +24,11 @@ function App() {
     setProducts(fetchProducts())
   }, [])
 
-  if (token === '') {
-    return (<Login setToken={setToken} setRole={setRole}/>)
-  } else {
-    return (
-      <BrowserRouter basename='/csi205/'>
+  return (
+    <BrowserRouter basename='/csi205/'>
+      {token === '' ? (
+        <Login setToken={setToken} setRole={setRole} />
+      ) : (
         <Routes>
           <Route element={<AppLayout products={products} carts={carts} setToken={setToken}/>}>
             <Route path='home' element={<Home />} />
@@ -39,13 +38,12 @@ function App() {
             <Route path='todos' element={<Todos />}/>
             <Route path='products' element={<Products products={products} carts={carts} setCarts={setCarts} />} />
             <Route path='carts' element={<Carts carts={carts} setCarts={setCarts} />} />
-            <Route path='login' element={<Login />} />
-            <Route path='*' element={<ForwardToHome />} />
+            <Route path='*' element={<Navigate to="/home" replace />} />
           </Route>
         </Routes>
-      </BrowserRouter>
-    )
-  }
+      )}
+    </BrowserRouter>
+  )
 }
 
 export default App

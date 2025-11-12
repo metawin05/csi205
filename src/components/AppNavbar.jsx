@@ -5,25 +5,25 @@ const AppNavbar = ({products, carts, setToken}) => {
     return (
     <div className='d-flex justify-content-center gap-2'>
         <Link to={'Home'}>
-            <Button variant='outline-primary'>Home</Button>
+            <Button variant='outline-primary'style={{textTransform: 'uppercase'}}>Home</Button>
         </Link>
         <Link to={'Calculator'}>
-            <Button variant='outline-primary'>Calculator</Button>
+            <Button variant='outline-primary' style={{textTransform: 'uppercase'}}>Calculator</Button>
         </Link>
         <Link to={'Animation'}>
-            <Button variant='outline-primary'>Animation</Button>
+            <Button variant='outline-primary' style={{textTransform: 'uppercase'}}>Animation</Button>
         </Link>
         <Link to={'Components'}>
-            <Button variant='outline-primary'>Components</Button>
+            <Button variant='outline-primary' style={{textTransform: 'uppercase'}}>Components</Button>
         </Link>
         <Link to={'Todos'}>
-            <Button variant='outline-primary'>Todos</Button>
+            <Button variant='outline-primary' style={{textTransform: 'uppercase'}}>Todos</Button>
         </Link>
         <Link to={'Products'}>
-            <Button variant='outline-primary'>Products ({products.length})</Button>
+            <Button variant='outline-primary' style={{textTransform: 'uppercase'}}>Products ({products.length})</Button>
         </Link>
         <Link to={'Carts'}>
-            <Button variant='outline-primary'>Carts ({carts.length})</Button>
+            <Button variant='outline-primary' style={{textTransform: 'uppercase'}}>Carts ({carts.length})</Button>
         </Link>
         <Link to={'Login'}>
             <Button variant='outline-danger' onClick={() => {

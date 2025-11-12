@@ -7,7 +7,10 @@ const Temperatures = ({ name }) => {
     let [c, setC] = useState(0)
 
     return (
-        <div className="border border-black border-2 m-auto mt-3 p-2 rounded-4 bg-secondary-subtle" style={{ width: 'fit-content' }}>
+        <div className="m-auto mt-3 p-2 rounded-4" style={{
+            width: 'fit-content',                 background: '#161616ff',
+            border: '2px solid #202020ff',
+        }}>
             <h2 className='text-center'>{name || 'ADDER'}</h2>
             <div className='d-flex justify-content-around'>
                 <div className='badge bg-primary p-3'>{a.toFixed(2)} C</div>
