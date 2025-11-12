@@ -12,16 +12,14 @@ const Login = ({ setToken, setRole }) => {
             <Form.Control
                 type="text"
                 id="username"
-                placeholder='user'
-                style={{ textAlign: 'center' }}
+                style={{ textAlign: 'center', marginBottom: '0.5rem', backgroundColor: '#161616ff', color: 'whitesmoke', border: '2px solid #202020ff' }}
                 ref={userRef}
             />
             <Form.Label htmlFor="password">password</Form.Label>
             <Form.Control
                 type="password"
                 id="password"
-                placeholder='pass'
-                style={{ textAlign: 'center' }}
+                style={{ textAlign: 'center', backgroundColor: '#161616ff', color: 'whitesmoke', border: '2px solid #202020ff' }}
                 ref={passRef}
             />
             <button className='btn btn-success mt-3' onClick={() => {
